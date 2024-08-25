@@ -1,0 +1,16 @@
+<header class="bg-[#c8f31d9f] p-6 rounded-br-full rounded-tl-full">
+    <div >
+        <ul class="flex  justify-center">
+            <a class="mr-4" routerLink="/" [routerLinkActive]="'underline'" [routerLinkActiveOptions]="{exact: true}">
+                <li>Home</li>
+            </a>
+            <a class="mr-4" [routerLink]="'users'" [routerLinkActive]="'underline'">
+                <li>Users</li>
+            </a>
+            <a class="mr-4" [routerLink]="'new-user'" [routerLinkActive]="'underline'">
+                <li>New user</li>
+            </a>
+        </ul>
+    </div>
+
+</header>

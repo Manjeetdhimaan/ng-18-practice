@@ -1,0 +1,17 @@
+<section class="mt-10">
+    <div class="grid place-content-center items-center">
+        <form [formGroup]="userForm" (ngSubmit)="onSubmitUserForm()">
+            <div class="mb-5">
+
+                <input type="text" class="border-b outline-none" placeholder="Full Name" formControlName="fullName">
+                @if ((isSubmitted && userFormControls['fullName'].invalid) || userFormControls['fullName'].dirty && userFormControls['fullName'].invalid) {
+                    <small class="block text-red-600">Please enter name</small>
+                }
+
+            </div>
+            <div class="border p-1 w-28 text-center">
+                <button>{{userId ? "Update user" :"Add user"}}</button>
+            </div>
+        </form>
+    </div>
+</section>

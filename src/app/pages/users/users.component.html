@@ -1,0 +1,24 @@
+<section>
+    <div>
+        <span>Counter: </span> <strong>{{counter}}</strong>
+    </div>
+    <div class="m-auto grid place-content-center">
+        <h1 class="text-xl font-bold mb-5 text-center">
+            Users List
+        </h1>
+        <div (click)="handleEventDelegation($event)">
+            @for (user of users; track user.fullName) {
+            <div class="bg-stone-200 m-1 py-2 px-8 rounded-br-full rounded-tl-full" [attr.data-id]="user.id" >
+                <span>
+                    {{user.id}}: {{user.fullName}}
+                </span>
+                <span class="float-right ml-8">
+                    <a class="text-red-400 cursor-pointer" data-action="delete" >Delete</a>
+                    <a class="ml-2 text-blue-400 cursor-pointer" data-action="edit" >Edit</a>
+                </span>
+            </div>
+            }
+        </div>
+    </div>
+
+</section>
